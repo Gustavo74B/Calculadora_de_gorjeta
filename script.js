@@ -1,5 +1,6 @@
 let conta = 0
 let pessoas = 0
+let porcentagem = 0
 
 const conta_input = document.querySelector("#conta")
 conta_input.addEventListener("input", receber_valor_conta)
@@ -24,4 +25,13 @@ function receber_quantidade_pessoas(evento) {
         pessoas = Number(evento.target.value)
     }
 
+}
+
+const botoes_gorjeta = document.querySelectorAll(".gorjeta input[type='button']")
+botoes_gorjeta.forEach(botao => {
+    botao.addEventListener("click", receber_porcentagem)
+})
+
+function receber_porcentagem(evento) {
+    console.log(evento.target.value)
 }
